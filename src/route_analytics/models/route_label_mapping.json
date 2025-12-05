@@ -1,0 +1,14 @@
+{
+  "HITCH": 0,
+  "IN": 1,
+  "GO": 2,
+  "CORNER": 3,
+  "SLANT": 4,
+  "SCREEN": 5,
+  "OUT": 6,
+  "CROSS": 7,
+  "POST": 8,
+  "FLAT": 9,
+  "WHEEL": 10,
+  "undefined": 11
+}
