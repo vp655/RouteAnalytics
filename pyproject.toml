@@ -1,6 +1,6 @@
 [project]
 name = "route-analytics"
-version = "0.1.2"
+version = "0.1.3"
 description = "Route-level prediction, WR/CB matchup analysis, and animation tools for NFL tracking data."
 requires-python = "==3.11.*"
 

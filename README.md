@@ -10,15 +10,15 @@ To avoid dependency issues, create a python virtual environment in the work fold
 
 Windows: 
 
-python -m venv route_env
-route_env\Scripts\activate
+1. python -m venv route_env
+2. route_env\Scripts\activate
 
 The terminal should now show: (route_env) 
 
 MacOS: 
 
-python3 -m venv route_env
-source route_env/bin/activate
+1. python3 -m venv route_env
+2. source route_env/bin/activate
 
 
 ## Installation
@@ -67,7 +67,7 @@ If you are using the animation utilities to visualize a given play:
 
 ```python
 
-from ravens_route import animate_play_from_row
+from route_analytics import animate_play_from_row
 import pandas as pd
 
 df = pd.read_csv("final_matchup_data.csv")
@@ -87,6 +87,19 @@ This will:
 - Create a frame-by-frame visualization of the route and coverage.
 - Save the GIF to the specified path.
 - Optionally display the animation if the environment supports it.
+
+## Jupyter Notebook 
+
+Inside the virtual environemnt follow these commands
+
+1. pip install jupyter ipykernel
+2. python -m ipykernel install --user --name route-env --display-name "Route Analytics ENV"
+3. jupyter notebook (will open a new tab)
+4. Follow the sample notebook (sample.ipynb)
+
+
+
+
 
 ## Finishing a Session
 
