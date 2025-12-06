@@ -4,25 +4,38 @@ A lightweight, production-ready Python package for evaluating wide receiver rout
 
 # User Guide (Start Here)
 
+## Virtual Environment 
+
+To avoid dependency issues, create a python virtual environment in the work folder:
+
+Windows: 
+
+python -m venv route_env
+route_env\Scripts\activate
+
+The terminal should now show: (route_env) 
+
+MacOS: 
+
+python3 -m venv route_env
+source route_env/bin/activate
+
+
 ## Installation
 
-Install directly from GitHub via HTTPS:
+Inside the virtual environment install the package
 
-pip install git+https://github.com/vp655/RavensRoutePackage.git
-
-If in a jupyter notebook the command is:
-
-!pip install git+https://github.com/vp655/RavensRoutePackage.git
+pip install git+https://github.com/vp655/RouteAnalytics.git
 
 
-This installs the package `ravens-route` (imported as `ravens_route` in Python) and all required dependencies.
+This installs the package `route-analytics` and all required dependencies.
 
 ## Data Required 
 
 Download `final_matchup_data.csv` from the data folder in the Github repository. 
 
 Then, visit https://www.kaggle.com/competitions/nfl-big-data-bowl-2021/data and sign in to the competition. Download all the data, 
-and save it in a folder called data_dir in the same workspace you are currently in. 
+and save it in a folder called `data_dir` in the same workspace you are currently in. 
 
 ## Predict Catch Probability
 
@@ -30,7 +43,7 @@ and save it in a folder called data_dir in the same workspace you are currently 
 ```python
 
 import pandas as pd
-from ravens_route import predict_route_prob
+from route_analytics import predict_route_prob
 
 df = pd.read_csv("final_matchup_data.csv")
 row = df.iloc[0]  
@@ -75,13 +88,19 @@ This will:
 - Save the GIF to the specified path.
 - Optionally display the animation if the environment supports it.
 
+## Finishing a Session
+
+To deactivate the environment simply type 
+
+deactivate 
+
 # Package Contents
 
 After installation, the package is available under your Python 3.11 site-packages directory, for example
 
 The structure looks like:
 
-ravens_route/
+route_analytics/
     __init__.py
     inference.py
     models_io.py
@@ -124,6 +143,8 @@ Transitive dependencies (automatically handled by pip):
 - six==1.16.0
 
 If you install via pip as shown above, these versions (or compatible ones) will be pulled in automatically. For maximum reproducibility, you can pin them explicitly in your own environment.
+
+If you install outside the virtual environment and have these packages already installed there may be errors. 
 
 # Common Errors and Fixes
 
