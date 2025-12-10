@@ -1,4 +1,4 @@
-# Ravens Route Package
+# Route Package
 
 A lightweight, production-ready Python package for evaluating wide receiver routes, generating catch-probability predictions, and animating route-level tracking data. The package ships with a pretrained XGBoost Booster model, a saved route label encoder, a feature specification JSON, and helper functions that make it easy to use the model on any row from your final matchup dataset.
 
@@ -6,29 +6,44 @@ A lightweight, production-ready Python package for evaluating wide receiver rout
 
 ## Virtual Environment 
 
-To avoid dependency issues, create a python virtual environment in the work folder:
+To avoid dependency issues, create a python virtual environment in the work folder. Make sure you have Python 3.11 installed.
+We are working to incorporate later versions. 
 
 Windows: 
 
-1. python -m venv route_env
-2. route_env\Scripts\activate
-
-The terminal should now show: (route_env) 
+```bash
+python3.11 -m venv route_env
+route_env\Scripts\activate
+```
 
 MacOS: 
 
-1. python3 -m venv route_env
-2. source route_env/bin/activate
+```bash
+python3.11 -m venv route_env
+source route_env/bin/activate
+```
+
+The terminal should now show: (route_env) 
+
 
 
 ## Installation
 
 Inside the virtual environment install the package
 
+Windows:
+
+```bash
 pip install git+https://github.com/vp655/RouteAnalytics.git
+```
 
+MacOS:
 
-This installs the package `route-analytics` and all required dependencies.
+```bash
+pip3 install git+https://github.com/vp655/RouteAnalytics.git
+```
+
+This installs the package `route-analytics` and all required dependencies. If you encounter a limomp error, please see the errors section. 
 
 ## Data Required 
 
@@ -191,11 +206,14 @@ Cause:
 XGBoost relies on OpenMP for parallelization. On macOS, you must install libomp manually.
 
 Fix (macOS only):
+```bash
 brew install libomp
 brew link libomp --force
 export DYLD_LIBRARY_PATH="/opt/homebrew/opt/libomp/lib:$DYLD_LIBRARY_PATH"
+```
 
 Add the export line to your shell configuration (e.g., ~/.zshrc or ~/.bash_profile), then restart your terminal or IDE.
+Alternatively if you are in the virtual environemnt, typing the export line will be sufficient. 
 
 3) Python Version Incompatibility (Python 3.13+)
 
@@ -206,9 +224,9 @@ Cause:
 Certain xgboost releases (including 3.0.5) are not yet compatible with Python 3.13+.
 
 Fix:
-Use Python 3.11 or Python 3.12 for this project. For example:
-- On Windows: install Python 3.11 or 3.12 from python.org.
-- On macOS/Linux: use pyenv, conda, or your package manager to create an environment with Python 3.11 or 3.12.
+Use Python 3.11 for this project. For example:
+- On Windows: install Python 3.11 from python.org.
+- On macOS/Linux: use pyenv, conda, or your package manager to create an environment with Python 3.11.
 
 
 # Contact
