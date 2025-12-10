@@ -47,7 +47,7 @@ This installs the package `route-analytics` and all required dependencies. If yo
 
 ## Data Required 
 
-Download `final_matchup_data.csv` from the data folder in the Github repository. 
+Download `final_matchup_data.csv` in the Github repository. 
 
 Then, visit https://www.kaggle.com/competitions/nfl-big-data-bowl-2021/data and sign in to the competition. Download all the data, 
 and save it in a folder called `data_dir` in the same workspace you are currently in. 
