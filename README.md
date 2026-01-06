@@ -2,6 +2,8 @@
 
 A lightweight, production-ready Python package for evaluating wide receiver routes, generating catch-probability predictions, and animating route-level tracking data. The package ships with a pretrained XGBoost Booster model, a saved route label encoder, a feature specification JSON, and helper functions that make it easy to use the model on any row from your final matchup dataset.
 
+![Demo play animation](assets/test_play_4_demo.gif)
+
 # User Guide (Start Here)
 
 ## Virtual Environment 
